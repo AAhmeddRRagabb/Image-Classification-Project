@@ -2,7 +2,7 @@
 This project provides hands-on experience in Machine Learning (ML) through the task of image classification. The primary goal is to classify images of Muslim shikhs using multiple ML algorithms, including Logistic Regression, Decision Tree, Random Forest, and Support Vector Machines.
 
 
-## The Workgflow
+## The Workflow
 1. Image Collection: Downloaded public images of well-known shikhs using Python’s `icrawler` library, which streamlined the process of gathering a large dataset for classification.
    
 2. Image Processing with OpenCV: Leveraged the OpenCV library to load, process, and clean images. In particular, OpenCV’s Haar cascades were used for detecting faces and eyes, simplifying the shikh detection process.
