@@ -23,6 +23,7 @@ Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate b
 
 
 ## Project hierarchy
+
 📂 Image-Classification-Project
 │
 ├── 📄 classification.ipynb                # Main Jupyter Notebook for training & evaluation
