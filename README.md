@@ -25,17 +25,17 @@ Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate b
 ## Project Files & Modules
 
 - data:  Dataset folder.
-   images: Raw images before processing.
-   faces: Automatically processed face images.
-   faces_after_manual_cleaning: Final dataset after manual review.
+   - images: Raw images before processing.
+   - faces: Automatically processed face images.
+   - faces_after_manual_cleaning: Final dataset after manual review.
 
 - models: Stores trained ML models.
 
 - server: The server files
-   app.py: Flask app entry point.
-   static: Contains CSS, JS, images, and test images for the web app.
-   templates: HTML templates for rendering pages.
-   utils: Backend helper scripts: best model, Haar cascades, inference logic, LLM integration, and class labels.
+   - app.py: Flask app entry point.
+   - static: Contains CSS, JS, images, and test images for the web app.
+   - templates: HTML templates for rendering pages.
+   - utils: Backend helper scripts: best model, Haar cascades, inference logic, LLM integration, and class labels.
 
 - utils: Image downloader script and Haar cascade XMLs for image detection.
   
