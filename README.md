@@ -23,33 +23,37 @@ Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate b
 
 
 
-📁 Image-Classification-Project/
+Image-Classification-Project/
 │
-├── 📄 classification.ipynb # Main Jupyter Notebook for training & evaluation
+├── classification.ipynb                # Training & evaluation
 │
-├── 📂 server/ # Flask backend + frontend integration
-│ ├── 📄 app.py # Flask app entry point
-│ ├── 📂 static/ # Static assets (CSS, JS, images)
-│ │ ├── 🎨 css/ # Stylesheets
-│ │ ├── ⚙️ js/ # JavaScript scripts
-│ │ ├── 🖼️ img/ # UI images (displayed on webpage)
-│ │ └── 🧪 test-images/ # Images for testing predictions
-│ ├── 📂 templates/ # HTML templates for Flask
-│ └── 📂 utils/ # Helper scripts & detection files
-│ ├── 🏆 champion_model/ # Best-performing trained model
-│ ├── 📂 open_CV_cascades/ # Haar cascade XMLs for inference
-│ ├── 🧠 classification.py # Classification reference script
-│ ├── 🧠 llm_details.py # LLM integration (OpenRouter API)
-│ └── 📜 shikhs.json # Class labels (shikh names)
+├── utils/                               # Standalone scripts & detection files
+│   └── open_CV_cascades/                # Haar cascade XMLs
 │
-├── 📂 models/ # All trained ML models
+├── server/                              # Flask backend + frontend
+│   ├── app.py                           # Flask app entry point
+│   ├── static/                          # Static assets
+│   │   ├── css/                         # Stylesheets
+│   │   ├── js/                          # JavaScript
+│   │   ├── img/                         # UI images
+│   │   └── test-images/                 # Test images
+│   ├── templates/                       # HTML templates
+│   └── utils/                           # Backend helpers
+│       ├── champion_model/              # Best-performing trained model
+│       ├── open_CV_cascades/            # Haar cascade XMLs
+│       ├── classification.py            # Inference logic
+│       ├── llm_details.py                # LLM integration
+│       └── shikhs.json                   # Class labels
 │
-├── 📂 data/ # Dataset (raw & processed)
-│ ├── 🖼️ images/ # Raw images (before cleaning)
-│ ├── 🧍 faces/ # Auto-processed images
-│ └── ✅ faces_after_manual_cleaning/ # Final dataset after manual review
+├── models/                              # Trained ML models
 │
-└── 📜 README.md # Project documentation
+├── data/                                # Dataset
+│   ├── images/                          # Raw images
+│   ├── faces/                           # Auto-processed images
+│   └── faces_after_manual_cleaning/     # Final dataset
+│
+└── README.md                            # Documentation
+
 
 
 ---
