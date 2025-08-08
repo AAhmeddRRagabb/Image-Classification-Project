@@ -44,7 +44,11 @@ Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate b
 - README.md – Project documentation and usage instructions.
 
 
-## Resources
+
+
+***Disclaimer:***Due to the lack of good quality images for model training, the project scope was limited to only five characters (shikhs) (Elhossary - Elbanaa - Msehary - Alaa Hamed - Abdelbaser)
+
+## Resources 
   [ML Image Classification](https://www.youtube.com/playlist?list=PLeo1K3hjS3uvaRHZLl-jLovIjBP14QTXc)
 
   
