@@ -46,7 +46,9 @@ Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate b
 
 
 
-***Disclaimer:*** Due to the lack of good quality images for model training, the project scope was limited to only five characters (shikhs) and those are (Elhossary - Elbanaa - Msehary - Alaa Hamed - Abdelbaser)
+***Disclaimer:*** Due to the lack of good quality images for model training, the project scope was limited to only five characters (shikhs) and those are (Elhossary - Elbanaa - Msehary - Alaa Hamed - Abdelbaset)
+
+--
 
 ## Resources 
   [ML Image Classification](https://www.youtube.com/playlist?list=PLeo1K3hjS3uvaRHZLl-jLovIjBP14QTXc)
