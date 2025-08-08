@@ -27,10 +27,9 @@ Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate b
 │
 ├── 📄 classification.ipynb                # Main Jupyter Notebook for training & evaluation
 │
-|── 📂 utils                                # Helper scripts & detection files
-|   ├── 👁️ open_CV_cascades/                # Haar cascade XMLs for inference
-|   ├── 📜 image_downloader.py              # Image downloader module
-|
+├── 📂 utils                                # Standalone helper scripts & detection files
+│   └── 👁️ open_CV_cascades/                # Haar cascade XMLs for inference
+│
 ├── 📂 server                               # Flask backend + frontend integration
 │   ├── 📄 app.py                           # Flask app entry point
 │   │
@@ -42,10 +41,10 @@ Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate b
 │   │
 │   ├── 📂 templates                        # HTML templates for Flask
 │   │
-│   ├── 📂 utils                            # Helper scripts & model files
-│   │   ├── 🏆 models/                      # Best-performing trained model
+│   ├── 📂 utils                            # Backend helper scripts & model files
+│   │   ├── 🏆 champion_model/              # Best-performing trained model
 │   │   ├── 👁️ open_CV_cascades/            # Haar cascade XMLs for inference
-│   │   ├── 🧠 classification.py            # Inference and prediction logic
+│   │   ├── 🧠 classification.py            # Inference & prediction logic
 │   │   ├── 🤖 llm_details.py               # LLM integration (OpenRouter API)
 │   │   └── 📜 shikhs.json                  # Class labels (shikh names)
 │
@@ -57,6 +56,8 @@ Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate b
 │   └── ✅ faces_after_manual_cleaning/     # Final dataset after manual review
 │
 └── 📜 README.md                            # Project documentation
+
+
 
 ---
 ---
