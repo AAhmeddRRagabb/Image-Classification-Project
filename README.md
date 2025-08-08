@@ -1,10 +1,70 @@
 # Image Classification Project
-This project offers hands-on experience in Machine Learning (ML) through the task of image classification. The primary goal is to classify images of Muslim shikhs using multiple ML algorithms, including logistic regression, decision tree, random forest, and support vector machines. The project was accomplished taking a several sequential steps, described below:- 
-1. Downloading public images (for public shikhs) using python `icrawler` library which eased the process of downloading several images for the classificaion project.
-2. Using the `OpenCV` library to load, process, and clean the images. The library was very useful and helped to extract the face area and the eyes from the image symplifying the process of detecting shikhs.
+This project provides hands-on experience in Machine Learning (ML) through the task of image classification. The primary goal is to classify images of Muslim shikhs using multiple ML algorithms, including Logistic Regression, Decision Tree, Random Forest, and Support Vector Machines.
+
+
+## The Workgflow
+1. Image Collection: Downloaded public images of well-known shikhs using Python’s `icrawler` library, which streamlined the process of gathering a large dataset for classification.
+   
+2. Image Processing with OpenCV: Leveraged the OpenCV library to load, process, and clean images. In particular, OpenCV’s Haar cascades were used for detecting faces and eyes, simplifying the shikh detection process.
    * [Face Detection](https://github.com/opencv/opencv/blob/4.x/data/haarcascades/haarcascade_frontalface_default.xml)
    * [Eye Detection](https://github.com/opencv/opencv/blob/4.x/data/haarcascades/haarcascade_eye.xml)
-3. After that, some images were not suitable for the project such as images for different persons, images with very poor quality, and etc. Those images have been manually cleaned in order to produce a high-performance model.
-4. Using the `wavelet` transformation to extract useful info from the image such as eyes, nose, and etc. The code are sourced from `StackOverFlow`.
-5. After that, several (ML) models are trained on the cleaned faces with the GridSearchCV. Results revealed that `LogisticRegression` & `SupportVectorMachine` models achieved a very good accuracy of 93%. However, the model found to perform poorly on certain character, who is `El-Hossary`, and that's due to the lack of different images since the majority of his training images were similar.
-6. The final step, was to serving this model using `Flask` environment ...
+     
+3. Manual Cleaning: Removed unsuitable images such as those showing different individuals, poor-quality images, or irrelevant content (downloaded by the crawler) to ensure high-quality training data.
+   
+4. Feature Extraction with Wavelet Transform: Applied wavelet transformation to extract key facial features such as eyes and nose. The implementation was adapted from solutions found on Stack Overflow.
+  
+5. Model Training & Evaluation: Trained multiple ML models on the cleaned dataset using GridSearchCV. Results showed that Logistic Regression and Support Vector Machine models achieved an accuracy of 93%. However, performance was weaker for certain individuals — e.g., El-Hossary — due to limited variety in their training images.
+   
+6. Model Deployment: Served the trained model through a Flask application, paired with a simple UI built using HTML & CSS, and enhanced with JavaScript for interactive functionality.
+
+
+## Additional Features
+Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate brief informational text about the classified shikh. This enhances the user experience by providing context along with the classification result.
+
+
+## Project hierarchy
+📂 Image-Classification-Project
+│
+├── 📄 classification.ipynb                # Main Jupyter Notebook for training & evaluation
+│
+|── 📂 utils                                # Helper scripts & detection files
+|   ├── 👁️ open_CV_cascades/                # Haar cascade XMLs for inference
+|   ├── 📜 image_downloader.py              # Image downloader module
+|
+├── 📂 server                               # Flask backend + frontend integration
+│   ├── 📄 app.py                           # Flask app entry point
+│   │
+│   ├── 📂 static                           # Static assets (CSS, JS, images)
+│   │   ├── 🎨 css/                         # Stylesheets
+│   │   ├── ⚙️ js/                          # JavaScript scripts
+│   │   ├── 🖼️ img/                         # UI images (displayed on webpage)
+│   │   └── 🧪 test-images/                 # Images for testing predictions
+│   │
+│   ├── 📂 templates                        # HTML templates for Flask
+│   │
+│   ├── 📂 utils                            # Helper scripts & model files
+│   │   ├── 🏆 models/                      # Best-performing trained model
+│   │   ├── 👁️ open_CV_cascades/            # Haar cascade XMLs for inference
+│   │   ├── 🧠 classification.py            # Inference and prediction logic
+│   │   ├── 🤖 llm_details.py               # LLM integration (OpenRouter API)
+│   │   └── 📜 shikhs.json                  # Class labels (shikh names)
+│
+├── 📂 models                               # All trained ML models
+│
+├── 📂 data                                 # Dataset (raw + processed)
+│   ├── 🖼️ images/                          # Raw images (before cleaning)
+│   ├── 👤 faces/                           # Auto-processed images
+│   └── ✅ faces_after_manual_cleaning/     # Final dataset after manual review
+│
+└── 📜 README.md                            # Project documentation
+
+---
+---
+* Additional Resources
+  [ML Image Classification](https://www.youtube.com/playlist?list=PLeo1K3hjS3uvaRHZLl-jLovIjBP14QTXc)
+---
+---
+***ALHAMDULILLAH***
+   
+
+  
