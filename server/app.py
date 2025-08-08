@@ -84,9 +84,6 @@ def process_llm_response():
     response = get_shikh_details(prompt = prompt)
 
     if response['status'] == 'LLM_ERR':
-        print(100 * '-')
-        print(response['message'])
-        print(100 * '-')
         return jsonify({
             'status' : 'LLM_ERR',
             'details' : '',
