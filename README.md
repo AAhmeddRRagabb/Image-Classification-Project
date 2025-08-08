@@ -22,37 +22,26 @@ This project provides hands-on experience in Machine Learning (ML) through the t
 Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate brief informational text about the classified shikh. This enhances the user experience by providing context along with the classification result.
 
 
+## Project Files & Modules
 
-Image-Classification-Project/
-│
-├── classification.ipynb                # Training & evaluation
-│
-├── utils/                               # Standalone scripts & detection files
-│   └── open_CV_cascades/                # Haar cascade XMLs
-│
-├── server/                              # Flask backend + frontend
-│   ├── app.py                           # Flask app entry point
-│   ├── static/                          # Static assets
-│   │   ├── css/                         # Stylesheets
-│   │   ├── js/                          # JavaScript
-│   │   ├── img/                         # UI images
-│   │   └── test-images/                 # Test images
-│   ├── templates/                       # HTML templates
-│   └── utils/                           # Backend helpers
-│       ├── champion_model/              # Best-performing trained model
-│       ├── open_CV_cascades/            # Haar cascade XMLs
-│       ├── classification.py            # Inference logic
-│       ├── llm_details.py                # LLM integration
-│       └── shikhs.json                   # Class labels
-│
-├── models/                              # Trained ML models
-│
-├── data/                                # Dataset
-│   ├── images/                          # Raw images
-│   ├── faces/                           # Auto-processed images
-│   └── faces_after_manual_cleaning/     # Final dataset
-│
-└── README.md                            # Documentation
+- data:  Dataset folder.
+   images: Raw images before processing.
+   faces: Automatically processed face images.
+   faces_after_manual_cleaning: Final dataset after manual review.
+
+- models: Stores trained ML models.
+
+- server: The server files
+   app.py: Flask app entry point.
+   static: Contains CSS, JS, images, and test images for the web app.
+   templates: HTML templates for rendering pages.
+   utils: Backend helper scripts: best model, Haar cascades, inference logic, LLM integration, and class labels.
+
+- utils: Image downloader script and Haar cascade XMLs for image detection.
+  
+- classification.ipynb – Jupyter Notebook for model training and evaluation.
+
+- README.md – Project documentation and usage instructions.
 
 
 
