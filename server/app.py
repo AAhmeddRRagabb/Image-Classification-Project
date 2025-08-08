@@ -7,8 +7,8 @@
 
 # Basic Imports & cfg
 from flask import Flask, render_template, request, jsonify 
-from server.utils.classification import classify, load_json_classes, load_model
-from server.utils.llm_details import get_shikh_details
+from utils.classification import classify, load_json_classes, load_model
+from utils.llm_details import get_shikh_details
 from pathlib import Path
 import re
 import os
@@ -84,7 +84,9 @@ def process_llm_response():
     response = get_shikh_details(prompt = prompt)
 
     if response['status'] == 'LLM_ERR':
+        print(100 * '-')
         print(response['message'])
+        print(100 * '-')
         return jsonify({
             'status' : 'LLM_ERR',
             'details' : '',

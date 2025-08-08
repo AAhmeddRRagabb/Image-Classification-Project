@@ -1,10 +1,12 @@
 import requests
+import os
 
+API_KEY = os.getenv('openrouter_api_key_ahmed_ragab_ai')
 def get_shikh_details(prompt):
     try:
         url = "https://openrouter.ai/api/v1/chat/completions"
         headers = {
-            "Authorization": f"Bearer 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",
+            "Authorization": f"Bearer {API_KEY}",
             "Content-Type": "application/json",
             "HTTP-Referer": "http://localhost",
             "X-Title": "Shikh Classification App"
@@ -32,6 +34,7 @@ def get_shikh_details(prompt):
         }
 
     except Exception as e:
+        # For Debugging
         print(f"ERROR: {e}")
         return {
             'status': 'LLM_ERR',

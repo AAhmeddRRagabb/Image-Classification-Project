@@ -1,2 +1,7 @@
 Alhamdulillah
----------------https://github.com/opencv/opencv/blob/4.x/data/haarcascades/haarcascade_frontalface_default.xml
+---------------
+* Face Detection
+https://github.com/opencv/opencv/blob/4.x/data/haarcascades/haarcascade_frontalface_default.xml
+
+* Eye Detection
+https://github.com/opencv/opencv/blob/4.x/data/haarcascades/haarcascade_eye.xml
