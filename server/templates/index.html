@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="title">Image Classification App</h1>
+    <div class="container images-container">
+        <section class="images">
+            <div class="shikh abdelbaset">
+                <img src="../static/img/abdelbaset.png" alt="">
+                <h3>Abdelbaset</h3>
+            </div>
+            <div class="shikh abdelbaset">
+                <img src="../static/img/alaa.png" alt="">
+                <h3>Alaa Hamed</h3>
+            </div>
+            <div class="shikh abdelbaset">
+                <img src="../static/img/banaa.png" alt="">
+                <h3>El-Banna</h3>
+            </div>
+            <div class="shikh abdelbaset">
+                <img src="../static/img/hossary.png" alt="">
+                <h3>hossary</h3>
+            </div>
+            <div class="shikh abdelbaset">
+                <img src="../static/img/meshary.png" alt="">
+                <h3>Meshary</h3>
+            </div>
+        </section>
+    </div>
+
+    <div class="container main-area">
+        <div class="drop-zone" id="dropZone">
+            <input type="file" id="imgInput" accept="image/*" />
+            <div class="drop-text" id="dropTxt">ارفع صورة هنا</div>
+        </div>
+        <div class="prediction" id="prediction">
+            <div class="notes active" id="notes">لم يتم اختيار صورة</div>
+            <div class="info" id="info">
+                <p class="name" id="name"></p>
+                <div class="details" id="details"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container control-area">
+        <button class="classify-btn active" id="classifyBtn">تصنيف</button>
+        <button class="details-btn"  id="detailsBtn">المزيد عن الشيخ</button>
+        <button class="reset-btn"    id="resetBtn">من جديد؟</button>
+    </div>
+            
+        </section>
+    </div>
+{% endblock %}
