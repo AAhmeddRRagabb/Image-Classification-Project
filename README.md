@@ -22,7 +22,6 @@ This project provides hands-on experience in Machine Learning (ML) through the t
 Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate brief informational text about the classified shikh. This enhances the user experience by providing context along with the classification result.
 
 
-## Project hierarchy
 
 📂 Image-Classification-Project
 │
