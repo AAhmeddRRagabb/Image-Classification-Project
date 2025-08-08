@@ -23,40 +23,33 @@ Integrated a free LLM from [OpenRouter.ai](https://openrouter.ai/) to generate b
 
 
 
-📂 Image-Classification-Project
+📁 Image-Classification-Project/
 │
-├── 📄 classification.ipynb                # Main Jupyter Notebook for training & evaluation
+├── 📄 classification.ipynb # Main Jupyter Notebook for training & evaluation
 │
-├── 📂 utils                                # Standalone helper scripts & detection files
-│   └── 👁️ open_CV_cascades/                # Haar cascade XMLs for inference
+├── 📂 server/ # Flask backend + frontend integration
+│ ├── 📄 app.py # Flask app entry point
+│ ├── 📂 static/ # Static assets (CSS, JS, images)
+│ │ ├── 🎨 css/ # Stylesheets
+│ │ ├── ⚙️ js/ # JavaScript scripts
+│ │ ├── 🖼️ img/ # UI images (displayed on webpage)
+│ │ └── 🧪 test-images/ # Images for testing predictions
+│ ├── 📂 templates/ # HTML templates for Flask
+│ └── 📂 utils/ # Helper scripts & detection files
+│ ├── 🏆 champion_model/ # Best-performing trained model
+│ ├── 📂 open_CV_cascades/ # Haar cascade XMLs for inference
+│ ├── 🧠 classification.py # Classification reference script
+│ ├── 🧠 llm_details.py # LLM integration (OpenRouter API)
+│ └── 📜 shikhs.json # Class labels (shikh names)
 │
-├── 📂 server                               # Flask backend + frontend integration
-│   ├── 📄 app.py                           # Flask app entry point
-│   │
-│   ├── 📂 static                           # Static assets (CSS, JS, images)
-│   │   ├── 🎨 css/                         # Stylesheets
-│   │   ├── ⚙️ js/                          # JavaScript scripts
-│   │   ├── 🖼️ img/                         # UI images (displayed on webpage)
-│   │   └── 🧪 test-images/                 # Images for testing predictions
-│   │
-│   ├── 📂 templates                        # HTML templates for Flask
-│   │
-│   ├── 📂 utils                            # Backend helper scripts & model files
-│   │   ├── 🏆 champion_model/              # Best-performing trained model
-│   │   ├── 👁️ open_CV_cascades/            # Haar cascade XMLs for inference
-│   │   ├── 🧠 classification.py            # Inference & prediction logic
-│   │   ├── 🤖 llm_details.py               # LLM integration (OpenRouter API)
-│   │   └── 📜 shikhs.json                  # Class labels (shikh names)
+├── 📂 models/ # All trained ML models
 │
-├── 📂 models                               # All trained ML models
+├── 📂 data/ # Dataset (raw & processed)
+│ ├── 🖼️ images/ # Raw images (before cleaning)
+│ ├── 🧍 faces/ # Auto-processed images
+│ └── ✅ faces_after_manual_cleaning/ # Final dataset after manual review
 │
-├── 📂 data                                 # Dataset (raw + processed)
-│   ├── 🖼️ images/                          # Raw images (before cleaning)
-│   ├── 👤 faces/                           # Auto-processed images
-│   └── ✅ faces_after_manual_cleaning/     # Final dataset after manual review
-│
-└── 📜 README.md                            # Project documentation
-
+└── 📜 README.md # Project documentation
 
 
 ---
